@@ -24,9 +24,9 @@ function App() {
     }, []);
 
     useEffect(() => {
-        localStorage.setItem('setMaxValue', JSON.stringify(maxSetValue + 1));
-        localStorage.setItem('setStartValue', JSON.stringify(minSetValue + 1));
-    }, [status]);
+        localStorage.setItem('setMaxValue', JSON.stringify(maxSetValue));
+        localStorage.setItem('setStartValue', JSON.stringify(minSetValue));
+    }, [maxSetValue, minSetValue]);
 
     const onClickIncHandler = () => {
         currentValue < maxSetValue && setCurrentValue(currentValue + 1);
